@@ -20,9 +20,7 @@ public class MemberService {
         this.memberRepository = memberRepository;
     }
 
-    /**
-     * 회원 가입
-     */
+    /* 회원 가입 */
     public Long join(Member member) {
 
         validateDuplicateMember(member); //중복 회원 검증
@@ -37,9 +35,7 @@ public class MemberService {
             });
     }
 
-    /**
-     * 전체 회원 조회
-     */
+    /* 전체 회원 조회*/
     public List<Member> findMembers() {
         return memberRepository.findAll();
     }
